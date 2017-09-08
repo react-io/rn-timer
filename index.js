@@ -1,18 +1,18 @@
-import React, {Component} from 'react'
+import React, {PureComponent, PropTypes} from 'react'
 import {View} from 'react-native'
 import {BehaviorSubject, Observable} from "@reactivex/rxjs";
 
 /**
  * Created by HyperSimon
  */
-export default class TimeController extends Component {
+export default class Timer extends PureComponent {
 
-  static propTypes: {
-    timestamp: React.PropTypes.number.isRequired, // 未来的某个时间戳
-    timerStep: React.PropTypes.number, // 计时器 step, 当前默认单位是 s
-    timerUnit: React.PropTypes.number, // 计时器 unit  not in use yet
-    binders: React.PropTypes.array,
-    timerFinishedListener: React.PropTypes.func, // 计时器计时结束的回调
+  static propTypes = {
+    timestamp: PropTypes.number.isRequired, // 未来的某个时间戳
+    timerStep: PropTypes.number, // 计时器 step, 当前默认单位是 s
+    timerUnit: PropTypes.number, // 计时器 unit  not in use yet
+    binders: PropTypes.object, // 值映射对
+    timerFinishedListener: PropTypes.func, // 计时器计时结束的回调
   };
 
   state = {
