@@ -2,7 +2,7 @@
 
 ## Description
 <p>通用定时器组件，子控件可以自定义，由`Timer`来控制计时器的相关功能</p>
-本组件**不提供**任何 UI 样式，只提供定时器功能。
+本组件**不提供** 任何 UI 样式，只提供定时器功能。
 
 ## Install
 `$ npm install rn-timer --save`
