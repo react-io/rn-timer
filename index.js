@@ -57,7 +57,7 @@ export default class Timer extends PureComponent {
     const timerFinishedSub = this.timerFinished$.subscribe({
       next: (isFinished) => {
         if (isFinished) {
-          timerFinishedListener()
+          if (timerFinishedListener) timerFinishedListener()
           timerSub.unsubscribe()
         }
       }
@@ -88,6 +88,6 @@ export default class Timer extends PureComponent {
   }
 
   componentWillUnmount() {
-    if (this.subscriptions) for (s in this.subscriptions) s.unsubscribe()
+    if (this.subscriptions) s.forEach(sub => sub.unsubscribe())
   }
 }
