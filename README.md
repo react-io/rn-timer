@@ -1,21 +1,23 @@
 # rn-timer
 
 ## Description
-通用定时器组件，子控件可以自定义，由`Timer`来控制计时器的相关功能
-
+<p>通用定时器组件，子控件可以自定义，由`Timer`来控制计时器的相关功能</p>
+本组件**不提供**任何 UI 样式，只提供定时器功能。
 
 ## Install
-`npm install rn-timer --save`
+`$ npm install rn-timer --save`
 
 
 ## Props
-```javascript
-timestamp: PropTypes.number.isRequired, // 未来的某个时间戳(计时结束时间戳)
-timerStep: PropTypes.number, // 计时器 step, 当前默认单位是 s
-timerUnit: PropTypes.number, // 计时器 unit  not in use yet
-binders: PropTypes.object, // 值映射对
-timerFinishedListener: PropTypes.func, // 计时器计时结束的回调
-```
+
+|Props|Type|Optional|default|Description|
+|:--|:--|:--|:--:|:--|
+|timestamp|number|❎||未来的某个时间戳(计时结束时间戳)|
+| timerStep |number|✅||时间跨度,1000则为1s|
+| timerUnit |number|✅|ms|(未启用)|
+| binders |object|✅||值映射对|
+| timerFinishedListener |func|✅||计时器计时结束的回调|
+
 
 
 ## Usage
@@ -50,7 +52,7 @@ export default class TimerExample extends Component {
 ```
 
 
-class `TimerUI`
+class `TimerUI` (Your customer component)
 
 ```javascript
 import React, {Component} from 'react';
