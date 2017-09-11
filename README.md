@@ -88,7 +88,7 @@ export default class TimerUI extends Component {
 ```
 
 
-![图片](./images/example.gif)
+![图片](https://raw.githubusercontent.com/react-io/rn-timer/master/images/example.gif)
 
 
 
