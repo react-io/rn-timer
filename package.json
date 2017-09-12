@@ -1,10 +1,22 @@
 {
   "name": "rn-timer",
-  "version": "0.1.2",
-  "author": "HyperSimon",
-  "email": "hero21c@outlook.com",
+  "version": "0.1.3",
+  "author": {
+    "email": "hero21c@outlook.com",
+    "name": "Simon Wang",
+    "url": "https://github.com/HyperSimon"
+  },
   "main": "index.js",
   "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/react-io/rn-timer"
+  },
+  "bugs": {
+    "url": "https://github.com/react-io/rn-timer/issues",
+    "email": "hero21c@outlook.com"
+  },
+  "license": "MIT",
   "dependencies": {
     "@reactivex/rxjs": "5.4.3"
   }
