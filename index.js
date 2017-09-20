@@ -88,6 +88,9 @@ export default class Timer extends PureComponent {
   }
 
   componentWillUnmount() {
-    if (this.subscriptions) s.forEach(sub => sub.unsubscribe())
+    if (this.subscriptions) s.forEach(sub => {
+        if (sub) sub.unsubscribe()
+      }
+    )
   }
 }
